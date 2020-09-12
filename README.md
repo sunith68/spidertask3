@@ -8,7 +8,9 @@
  Clone the repository or download the zip file of the code on your system
  Open Command prompt and navigate to the repository folder.
  Once inside the folder run the following commands.
- `npm install`
- `node app`
+ ```
+ npm install
+ node app
+ ```
 To access the website open a browser and visit the following url
 http://localhost:3000/
