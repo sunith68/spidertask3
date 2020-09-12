@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+	<%- include('./partials/customertop.ejs'); %>
+	<div class="view2">
+	<div class='viewtxt'>My Purchases</div>
+	<div>
+		<% if (messages.msg) { %>
+			<%= messages.msg %>
+		<% } %>
+	</div>
+		<%if(history.length!=0){%>
+		<table id='table1'>
+			<tr>
+				<th>Product</th>
+				<th>Quantity</th>
+				<th>Price</th>
+				<th>Purchased on</th>
+			</tr>
+		<% history.forEach(function(product){ %>
+			<tr>
+				<td><%= product.name %></td>
+				<td><%=product.quantity%></td>
+				<td><%=product.price%></td>
+				<td class="date1"><%=product.date%></td>
+			</tr>
+		<% }) %>
+		</table>
+		<%}%>
+		<%if(history.length==0){%>
+			<div class='nomsg'>You haven't purchased any products....</div>
+		<%}%>
+	</div>
+	<script>
+		document.querySelectorAll('.date1').forEach((d)=>{
+			var t1=new Date(d.innerText);
+			d.innerText=t1.getDate()+'/'+(t1.getMonth()+1)+'/'+t1.getFullYear();
+		})		
+	</script>
+</body>
+</html>

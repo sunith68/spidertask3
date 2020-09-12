@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Signup</title>
+	<link rel="stylesheet" type="text/css" href="/style1.css">
+</head>
+<body class='background1'>
+	<div class= 'sign'>
+		<div class='signtxt'>Sign Up</div>
+		<% if (messages.error) { %>
+		<div class='signerror'>
+		<%= messages.error %>	
+		</div>
+		<% } %>	
+		<form action='/user/signup' method='POST' class='signform'>
+			<%if(user==null){%>
+			<select id="options" name="usertype">
+				<option value="Customer" selected>Customer</option>
+				<option value="Seller">Seller</option>
+			</select>
+			<% } %>
+			<%if(user!=null){%>	
+				<%if(user.usertype=='Customer'){%>
+				<select id="options" name="usertype">
+					<option value="Customer" selected>Customer</option>
+					<option value="Seller">Seller</option>
+				</select>
+				<% } %>	
+				<%if(user.usertype=='Seller'){%>
+				<select id="options" name="usertype">
+					<option value="Customer">Customer</option>
+					<option value="Seller" selected>Seller</option>
+				</select>
+				<% } %>
+			<% } %>	
+		 	<label>Username</label>
+		 	<input type="text" placeholder="Enter Your Username" name="username" required 
+		 	value="<%=user!=null?user.username:''%>">
+		 	<label>Name</label>
+		 	<input type="text" placeholder="Enter Your Name" name="name" required
+		 	value="<%=user!=null?user.name:''%>">
+		 	<label>Email</label>
+		 	<input type="email" placeholder="Enter Your Email" name="email" required
+		 	value="<%=user!=null?user.email:''%>">
+		 	<label>Password</label>
+		 	<input type="password" name="password" required id='pass'
+		 	value="<%=user!=null?user.password:''%>">
+		 	<label>Confirm Password</label>
+		 	<input type="password" name="cpassword" required id='cpass'
+		 	value="<%=user!=null?user.cpassword:''%>">
+		 	<button type="submit" class='signbtn'id='loginbtn'>Sign up</button>
+		</form>
+		<span>Already a member? <a href="login"> Login</a></span>
+	</div>
+</body>
+</html>

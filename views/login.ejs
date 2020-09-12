@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="/style1.css">
+</head>
+<body class="background1">
+	<div class= 'sign'>
+		<div class='signtxt'>Sign In</div>
+		<% if (messages.error) { %>
+		<div class='signerror'>
+		<%= messages.error %>	
+		</div>
+		<% } %>	
+		<% if (messages.success) { %>
+		<div class='signerror msggreen'>
+		<%= messages.success %>	
+		</div>
+		<% } %>			
+		<form action='/user/login' method='POST' class='signform'>
+			<label>Username</label>
+			<input type="text" placeholder="Enter Your Username" name="username" required>
+		 	<label>Password</label>
+		 	<input type="password" name="password" required>
+		 	<button type="submit" class="signbtn">Login</button>
+		</form>
+		<span>Not a member? <a href="signup">Sign Up</a></span>
+	</div>
+</body>
+</html>

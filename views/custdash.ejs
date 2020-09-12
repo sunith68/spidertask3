@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+	<%- include('./partials/customertop.ejs'); %>
+	<div>
+		<% if (messages.msg) { %>
+			<%= messages.msg %>
+		<% } %>
+	</div>
+	<div class="container1">
+		<div class="title1">Suggestions</div>
+		<%if(products.length!=0){%>
+		<div class='sortopt'>
+			<select id='sortselect'>
+				<option disabled selected hidden>Sort by</option>
+				<option>Ascending</option>
+				<option>Descending</option>
+			</select>
+		</div>
+		<%}%>
+		<div id='qwe'>
+		<% products.forEach(function(product){ %>
+			<div class="card hover1">
+				<a class ='acard' href="/open/<%=product.id%>" class="read">
+					<div><img src="<%= product.image %>" alt="Image not found"></div>
+					<h2 class='name1'><%=product.name%></h2>
+				</a>
+			</div>
+		<% }) %>
+		</div>
+		<%if(products.length==0){%>
+			<div class='nomsg'>No Items Found..</div>
+		<%}%>
+	</div>
+	<script src="/js/sort.js"></script>
+</body>
+</html>

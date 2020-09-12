@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bangers&family=Roboto:wght@700&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: black;
+
+}
+
+body{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background: #fdfdfd;
+	background: #f3f3f3;
+}
+.background1{
+	background-image: url("/images/bg7.jpg");
+	background-size: 100px;
+  	background-repeat: repeat;
+}
+.background2{
+	margin: 0;
+	min-height: 100%;
+	background-image: linear-gradient(#ffffff, #e0e0e0);
+}
+/*div{
+	background: #fdfdfd;
+}*/
+a{
+	text-decoration: none;	
+}
+button{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:16px;
+	padding: 4px;
+	background: #4d94ff;
+	border: none;
+}
+button:hover{
+	cursor: pointer;
+}
+.top{
+	padding-top: 10px;
+	font-size: 40px;
+	font-family: 'Bangers', cursive;
+	background: #404040;
+/*	background:  #5900b3;*/
+	color: white;
+	text-align: center;
+}
+.panel{
+	font-size: 27px;
+	font-family: 'Acme', sans-serif;
+	padding: 10px 10px;
+	padding-top: 0px;
+	background: #404040;
+/*	background: #6600cc;*/
+	color: green;
+}
+.panel form{
+	float: right;
+	display: inline-block;
+}
+.panel a{
+	color: white;
+	padding: 0 8px;
+}
+.panel button{
+	font-size: 24px;
+	font-family: 'Acme', sans-serif;
+	background: #404040;
+	color: white;
+}
+.changes{
+	width: 75vw;
+	margin:auto;
+	margin-top: 20px;
+}
+.create label{
+	display: block;
+	margin-top:2px;
+}
+.create input,textarea{
+	display: block;
+	padding: 3px 0;
+	margin-bottom: 4px;
+}
+.create input:nth-child(2){
+	width: 60vw;
+}
+.create textarea{
+	width: 75vw;
+}
+.create a,button{
+	margin-left: 2px; 
+}
+/*check*/
+img{
+	width: 300px;
+	height:200px;
+	object-fit: cover;
+	overflow: auto;
+}
+label{
+	display: block;
+	margin-top:2px;
+}
+input{
+	display: block;
+	padding: 3px 0;
+	margin-bottom: 4px;
+}
+/*.newline{
+	white-space: pre;
+}*/
+.sign{
+	background: #fdfdfd;
+	margin:auto;
+	width:23vw;
+	padding: 15px 30px;
+	font-size: 20px;
+	border:3px solid #808080;
+	box-shadow: 0px 0px 10px 3px #888888;
+	margin-top: 3vw;
+}
+.signtxt{
+	font-size: 30px;
+	text-align: center;
+	font-family: 'Acme', sans-serif;
+}
+.signform label{
+	padding: 5px;
+	margin: 3px;
+}
+.signform input,select{
+	width: 18vw;
+	padding: 5px;
+	margin: 3px;
+}
+.signform select{
+	margin-top: 8px;
+}
+.signbtn{
+	margin: 10px;
+	padding: 5px 8px;
+	margin-top: 10px;
+	font-size: 17px;
+	background: #b3d9ff;
+	border: 0.5px solid #99ccff;
+	border-radius: 3px; 
+}
+.signbtn:hover{
+	background: #cce6ff;
+}
+.sign a{
+	color: #0040ff;
+}
+.signerror{
+	font-size: 17px;
+	background: rgba(249, 36, 36, 0.4);
+	padding: 5px;
+	border-left:3px solid #ff0000;
+	margin-top: 3px;  
+}
+.container1{
+	width:94vw;
+	margin: auto;
+}
+.title1{
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+	margin: 8px 0px 15px 0px;
+/*	margin-bottom: 15px;
+	margin-top: 8px;
+	margin-right: none; */
+	width: 60vw;
+}
+.card{
+	background: #fdfdfd;
+	width:22vw;
+	margin: auto;
+	padding: 10px 5px;
+	border:1.5px solid #808080;
+	border-radius: 4px;
+	text-align: center;
+	margin-bottom: 10px;
+	margin-left: 1vw;
+	display: inline-block;
+}
+.hover1:hover{
+	box-shadow: 0px 0px 1px 1px #888888;
+}
+.btn1{
+	display: inline-block;
+	margin: 2px;
+	padding: 3px;
+	border:1px solid #1ac6ff;
+	border-radius: 5px;
+}
+.btn1:hover{
+	background: #c0c0c0;
+}
+
+.form1{
+	margin-left:10px;
+	padding: 10px;
+	padding-top: 0px;
+}
+.card img{
+	width: 20vw;
+	height:13vw;
+	object-fit: cover;
+}
+.view{
+	width: 55vw;
+	margin: auto;
+	margin-top: 10px;
+	font-size: 17px;
+}
+.form2{
+	margin: 8px 10px;
+}
+.form2 .btn2{
+	width: 150px;
+}
+.view span,label,input{
+	font-size: 17px;
+	text-decoration: none;
+	display: inline-block;
+	width: 13vw;
+}
+.view div,label{
+	margin-left: 30px;
+}
+.view div{
+	padding: 5px;
+	margin-bottom:5px; 
+}
+.view img{
+	width: 30vw;
+	height:20vw;
+	object-fit: contain;
+}
+.view .img1{
+	text-align: center;
+	margin-left: 0;
+}
+.btn2{
+	display: block;
+	margin:auto;
+	margin-top: 10px;
+	padding:7px; 
+	border-radius: 3px;
+	background: #79cdf7; 
+	border: 1px solid #0074b8;
+	background: rgb(0,139,219);
+	color: white;
+}
+.btn2:hover{
+	background: rgb(0,139,219,0.9);
+}
+.msg1{
+	font-size: 17px;
+	background: rgba(249, 36, 36, 0.4);
+	padding: 5px;
+	border-left:2px solid #ff0000;
+	margin-top: 3px;  
+}
+.width2{
+	width: 65vw;
+}
+.viewtxt{
+	font-size: 27px;
+	margin-top: 5px;
+	font-family: 'Roboto', sans-serif;
+}
+.form1{
+	width: 60vw;
+	margin: auto;
+	display: block;
+}
+.form1 label,input,textarea,select{
+	display: inline-block;
+}
+.form1 input,select,option{
+	width: 20vw;
+}
+.form1 select{
+	margin-left:0; 
+}
+.form1 .namei{
+	width: 30vw;
+}
+.form1 textarea{
+	font-family:sans-serif;
+	font-size: 17px;
+	width: 30vw;
+	vertical-align: top;
+}
+.form1 div{
+	margin: none;
+	padding: none;
+	width: 50vw;
+}
+#check1{
+	display: block;
+	margin: auto;
+}
+.imgcenter{
+	text-align: center;
+}
+.delbtnspace{
+	padding-left: 50px;
+
+}
+.delbtn{
+	width: 7vw;
+	padding:6px; 
+	border-radius: 3px;
+	color: white;
+	background: rgba(240,0,0);
+	border: 1px solid #c20000;
+}
+.delbtn:hover{
+	background: rgba(250,0,0,0.8);
+}
+h2{	
+	font-size: 20px;
+	margin-bottom: 2px;
+	margin-top: 3px; 
+	font-weight:bold;
+}
+.card h2{
+	display: block;
+}
+.card .btn2{
+	display: inline-block;
+	width: 9vw;
+}
+.detview div{
+	margin-left: 100px; 
+}
+.detbtndiv{
+	text-align: center;
+}
+.detbtndiv a,button{
+	width: 6vw;
+	display: inline-block;
+	margin: auto;
+	margin-left:10px; 
+}
+.detbtndiv .ph{
+	width: 10vw;
+}
+.view2{
+	width: 70vw;
+	margin: auto;
+	margin-top: 15px;
+}
+.view2 .viewtxt{
+	margin-bottom: 10px;
+}
+#table1 {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+#table1 td, #table1 th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 17px;
+}
+#table1 tr:nth-child(even){background-color: #f2f2f2;}
+#table1 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #333482;
+  color: white;
+  font-size: 20px;
+}
+.nomsg{
+	margin:20px;
+	font-size: 20px; 
+}
+.search{
+	width: 35vw;
+	margin:auto;
+	margin-top: 10px;
+}
+
+.search input{
+	display: inline-block;
+	width: 20vw;
+	padding: 3px 2px;
+	margin-right: 10px;
+	margin-bottom: 15px;
+}
+.search .btn2{
+	display: inline-block;
+	padding: 5px;
+}
+.view3{
+	width: 50vw;
+	margin: auto;
+	margin-top: 10px;
+	padding: 5px;
+}
+.card2{
+	display: block;
+	width:45vw;
+	margin: auto;
+	padding:10px;
+	margin-bottom:15px; 
+	padding-bottom: 18px; 
+	border-bottom: 1px solid #919191; 
+}
+.card2 a,h2,span{
+	display: inline-block;
+}
+.qty1{
+	display: inline-block;
+	width:15vw;
+	margin:auto;
+	font-size: 20px;
+}
+.pname1{
+	font-size: 21px;
+	margin-bottom: 5px; 
+}
+.card2 a{
+	float: right;
+	margin: 0px;
+}
+.btn5{
+	margin: 0px;
+	font-size: 16px;
+	padding: 5px;
+	border-radius: 3px; 
+	border: 1px solid #0074b8;
+	background: rgb(0,139,219);
+	color: white;
+	width: 7vw;
+	text-align: center;
+}
+.btn5:hover{
+	background: rgb(0,139,219,0.85);
+}
+.remove1{
+	display: inline-block;
+	float: right;
+}
+.pform{
+	display: block;
+	margin-left:20px; 
+	margin-top: 10px; 
+}
+.btn4{
+	color: white;
+	background:#03a300;
+	width: 120px;
+	font-size:17px;
+	padding: 6px;
+	border: 1px solid #028200;
+	border-radius: 5px; 
+}
+.btn4:hover{
+	background: rgba(3,176,0,0.9);
+}
+.allign1{
+	width: 70vw;
+	margin: auto;
+	margin-top:15px;
+	margin-bottom: 15px; 
+}
+#canvas{
+	display: block;
+	margin:auto;
+}
+.msggreen{
+	background:rgb(24, 230, 14,0.4) ;
+	border-left:3px solid #2ccc25;
+}
+.msgred{
+	background: rgba(249, 36, 36, 0.4);
+	border-left:3px solid #ff0000;
+}
+.msgblue{
+	background: rgba(61, 141, 245, 0.4);
+	border-left:3px solid #252dcc;
+}
+.view3 .msg1{
+	margin: auto;
+	width: 45vw;	
+	margin-top: 8px;
+}
+.searched .nottxt{
+	width: 90vw;
+	text-align: center;
+	margin-top: 30px;
+	font-size: 25px; 
+}
+.width2 .msg1{
+	width:50vw;
+	margin-left:5vw ;
+}
+.signform select{
+	width: 18vw;
+}
+.title1{
+	display: inline-block;
+	width: 62vw;
+}
+.sortopt{
+	display: inline-block;
+	width:17vw;
+	float: right;
+	margin-top:10px; 
+}
+.sortopt select{
+	width: 15vw;
+}
+.top img{
+	margin-left:15px; 
+	width: 35px;
+	height: auto;
+	object-fit: contain;
+}

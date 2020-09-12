@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Error</title>
+	<link rel="stylesheet" type="text/css" href="/style1.css">
+	<style>
+		.allign2{
+			text-align: center;
+			margin-top: 40px;
+		}
+		.allign2 span{
+			margin-left: 15px;
+			font-weight:bold;
+			color: #0e00ab;
+		}
+		span:hover{
+			cursor: pointer;
+			color: #2a00d4;	
+		}
+	</style>
+</head>
+<body>
+	<div class='viewtxt allign2'>Item Not Found!!! <span onclick="goBack()">Back?</span></div>
+
+	<script>
+		function goBack() {
+		  window.history.back();
+		}
+	</script>
+</body>
+</html>

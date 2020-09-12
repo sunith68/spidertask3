@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title><%=item.name%></title>
+	<link rel="stylesheet" type="text/css" href="/style1.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+	<%- include('./partials/customertop.ejs'); %>
+	<div class='view'>
+		<div>
+			<% if (messages.msg) { %>
+				<div class='msg1'><%= messages.msg %></div>
+			<% } %>
+			<div id='error1' class='msg1'>Invalid value for quantity</div>
+		</div>
+		<form action="/cart/<%=item.id%>" method="POST" class='form2'>
+			<div class='img1'><img src="<%= item.image %>" alt="Image not found"></div>
+			<div><span>Name : </span><%=item.name%></div>
+			<div><span>Description : </span><%=item.description%></div>
+			<div><span>Category : </span><%=item.category%></div>
+			<div><span>Available : </span><%=item.quantity%> units</div>
+			<div><span>Price : </span><%=item.price%></div>
+			<label>Quantity</label>
+			<input type="number" name="quantity" value='1' required id='quantity'>
+			<button type="submit" id='submitbtn' class='btn2'>Add to Cart</button>
+		</form>
+	</div>
+	<script src="/js/check1.js"></script>
+</body>
+</html>

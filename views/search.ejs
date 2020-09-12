@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Search</title>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+	<%- include('./partials/customertop.ejs'); %>
+	<div class='search'>
+		<form action="/search" method="POST">
+			<input type="text" id='searchbar' name='search' placeholder="Enter item">
+			<button type="submit" class="btn2">Search</button>
+		</form>
+	</div>
+	<div id= 'sresults' class='searched'>
+		<%if(results){%>
+		<%if(results.length==0){%>
+		<div class='nottxt'>Item not found</div>
+		<%}%>
+		<div class="container1">
+			<% results.forEach(function(product){ %>
+				<div class="card hover1">
+					<a class ='acard' href="/open/<%=product.id%>" class="read">
+						<div><img src="<%= product.image %>" alt="Image not found"></div>
+						<h2><%= product.name %></h2>
+					</a>
+				</div>
+			<% }) %>
+		</div>
+		<%}%>	
+	</div>
+	
+<!-- 	<div id= 'sresults' class='searched'>
+		<%if(results){%>
+		<%if(results.length==0){%>
+		<div>Item not found</div>
+		<%}%>
+		<%results.forEach(function(result){ %>
+		<div class='searchu'>
+			<a href="/open/<%=result.id%>"><%=result.name%></a>
+		</div>
+		<%})}%>	
+	</div> -->
+
+</body>
+</html>

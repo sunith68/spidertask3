@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cart</title>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+	<%- include('./partials/customertop.ejs'); %>
+	<div class="view3">
+	<div class='viewtxt'>My Cart</div>	
+	<% if (items.length!=0) { %>
+	<form action="/purchase" method="POST" class='pform'>
+		<button type="submit" class='btn4'>Purchase</button>
+	</form>
+	<% } %>
+	<div>	
+		<% if (messages.error) { %>
+			<div class='msg1 msgred'><%= messages.error %></div>
+		<% } %>
+		<% if (messages.success) { %>
+			<div class='msg1 msggreen'><%= messages.success %></div>
+		<% } %>
+		<% if (messages.msg) { %>
+			<div class='msg1 msgblue'><%= messages.msg %></div>
+		<% } %>	
+	</div>	
+	<% if (items.length==0) { %>
+		<div class='nomsg'>Your Cart is empty..</div>
+	<% } %>		
+	<% items.forEach(function(item){ %>
+		<div class='card2'>
+		  	<div class='pname1'>Item     : <%= item.name %></div>
+			<span class="qty1">Quantity : <%= item.quantity %></span>
+			<form action="/cart/remove/<%=item.item%>" method="POST" class='remove1'>
+				<button type="submit" class='delbtn'>Remove</button>
+			</form>
+			<a href="/cart/update/<%=item.item%>" class="btn5">Update</a>
+		</div>
+	<% }) %>
+	</div>
+</body>
+</html>

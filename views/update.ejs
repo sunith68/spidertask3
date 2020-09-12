@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Update</title>
+	<link rel="stylesheet" type="text/css" href="/style1.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<style >
+		.width2{
+			margin-bottom: 40px;
+		}
+	</style>
+</head>
+<body>
+	<%- include('./partials/sellertop.ejs'); %>
+	<div class='view width2'>
+		<div class='viewtxt'>Update Item</div>
+		</span ><form action="/delete/<%=item.id%>" method="POST" class='delbtnspace'>
+			<button type="submit" class='delbtn'>Remove Item</button>
+		</form><span>
+		<div id="error" class='msg1'></div>
+		<form action="/update/<%=item.id%>" method="POST" class='form1' enctype = "multipart/form-data">
+			<div class='imgcenter'>
+			<img src="<%= item.image %>" alt="Image not found"></div>
+			<div>
+			<label>Item Name</label>
+			<input type="text" placeholder="Enter item name" name="name" value='<%= item.name %>' required class='namei'>
+			</div><div class="tarea">		
+			<label>Description</label>
+			<textarea type="text" placeholder="Enter item description" name="description" required rows='3'><%= item.description %></textarea>
+			</div><div>
+			<label>Category</label>
+			<select name='category' id='select'>
+				<option value="<%=item.category%>" selected id='option'><%=item.category%></option>
+			</select>
+			</div><div>
+			<label>Price</label>
+			<input type="number" placeholder="Enter price" name="price" id="price" required value='<%= item.price %>'>
+			</div><div>
+			<label>Quantity</label>
+			<input type="number" placeholder="Enter quantity" name="quantity" id="quantity" required value='<%= item.quantity %>'>
+			</div><div>
+			<label>Change Image</label>
+			<input type="file" name="image" id="image" placeholder="Change image">
+			</div>
+			<span id="check1"> <button type="submit" id="submitbtn" class='btn2'>Update</button></span>
+		</form>
+	</div>
+	<script src="/js/check.js"></script>
+	<script src="/js/selectopt.js"></script>
+</body>
+</html>

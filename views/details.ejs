@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>View</title>
+	<link rel="stylesheet" type="text/css" href="/style1.css">
+</head>
+<body>
+	<%- include('./partials/sellertop.ejs'); %>
+	<div class='view detview'>
+		<% if (messages.msg) { %>
+			<div class='msg1 msgblue'><%= messages.msg %></div>
+		<% } %>	
+		<div class='img1'><img src="<%= item.image %>" alt="Image not found"></div>
+		<div><span>Name : </span><%=item.name%></div>
+		<div><span>Category : </span><%=item.category%></div>
+		<div><span>Description : </span><%=item.description%></div>
+		<div><span>Available : </span><%=item.quantity%> units</div>
+		<div><span>Price : </span><%=item.price%></div>
+		<div class='detbtndiv'>
+		<a href="/details/history/<%=item.id%>" class='btn2 ph'>Purchase History</a>
+		<a href="/details/statistics/<%=item.id%>" class='btn2 ph'>Statistics Graph</a>
+		<a href="/update/<%=item.id%>" class="btn2">Update</a>
+		</div>
+	</div>
+</body>
+</html>
