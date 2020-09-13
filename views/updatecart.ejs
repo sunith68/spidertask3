@@ -17,8 +17,8 @@
 		</div>
 		<form action="/cart/update/<%=item.id%>" method="POST"class='form2'>
 			<div class='img1'><img src="<%= item.image %>" alt="Image not found"></div>
-			<div><span>Name : </span><%=item.name%></div>
-			<div><span>Description : </span><%=item.description%></div>
+			<div><span>Name : </span><span class='remain'><%=item.name%></span></div>
+			<div><span>Description : </span><span class='remain'><%=item.description%></span></div>
 			<div><span>Category : </span><%=item.category%></div>
 			<div><span>Available : </span><%=item.quantity%> units</div>
 			<div><span>Price : </span><%=item.price%></div>
