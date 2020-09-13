@@ -526,3 +526,6 @@ h2{
 	height: auto;
 	object-fit: contain;
 }
+.remain{
+	vertical-align: top;
+}
