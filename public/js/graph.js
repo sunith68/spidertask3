@@ -1,5 +1,6 @@
 var dates=[];
 var today=new Date();
+var today2= new Date(today.getFullYear(),today.getMonth(),today.getDate());
 var day=1000*60*60*24;
 var arr=[0,0,0,0,0,0,0];
 
@@ -55,6 +56,9 @@ function group(){
 		k=(today.getTime() - dates[i].date.getTime())/day;
 		k=Math.floor(k);
 		if(k<7){
+			if (today2.getTime()>dates[i].date.getTime()){
+				k+=1;
+			}			
 			arr[k]+=parseInt(dates[i].quantity);
 		}
 	}
